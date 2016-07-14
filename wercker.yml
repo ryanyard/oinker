@@ -61,10 +61,9 @@ build-prod:
         code: |
           gem install bundler
           bundle install --without development test
-          #bundle install
     - script:
-	name: copy binary
-	code: |
+        name: copy binary
+        code: |
 	  cp template.sh $WERCKER_OUTPUT_DIR
     - internal/docker-push:
         username: $USERNAME
